@@ -708,13 +708,13 @@ body::after {
 .flood-image {
     background:
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
-        url("images/flood-project.jpg") center/cover;
+        url("img/Flood_Susceptibility_Map.png") center/cover;
 }
 
 .reclamation-image {
     background:
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
-        url("images/reclamation-project.jpg") center/cover;
+        url("img/maji.jpeg") center/cover;
 }
 
 .mapping-image {
