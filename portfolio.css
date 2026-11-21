@@ -684,7 +684,7 @@ img {
 .proximity-image {
     background-image:
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
-        url("img/proximity-poster.gif");
+        url("img/proximity.png");
 }
 .project-info {
     padding: 25px;
