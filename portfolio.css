@@ -744,7 +744,7 @@ body::after {
             rgba(8, 12, 18, 0.2),
             rgba(8, 12, 18, 0.85)
         ),
-        url("img/GLG.kenya.png");
+        url("img/glg_kenya.png");
 
     background-size: cover;
     background-position: center;
