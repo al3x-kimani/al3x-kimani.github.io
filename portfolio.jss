@@ -1,318 +1,428 @@
+/* =========================================
+   MOBILE NAVIGATION
+========================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+const navLinks = document.querySelectorAll(".nav-link");
 
-    // ==========================================
-    // 1. MOBILE NAVIGATION MENU
-    // ==========================================
+if (menuToggle && navbar) {
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
-    const navigationItems = document.querySelectorAll(".nav-links a");
+    menuToggle.addEventListener("click", () => {
 
-    if (menuToggle && navLinks) {
+        navbar.classList.toggle("open");
+        document.body.classList.toggle("menu-open");
 
-        menuToggle.addEventListener("click", () => {
-            const isOpen = navLinks.classList.toggle("active");
+        const icon = menuToggle.querySelector("i");
 
-            menuToggle.setAttribute("aria-expanded", isOpen);
-            menuToggle.classList.toggle("open", isOpen);
-        });
-
-        // Close menu after clicking a navigation link
-        navigationItems.forEach(link => {
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-            });
-        });
-
-        // Close menu when clicking outside it
-        document.addEventListener("click", event => {
-            const clickedInsideMenu = navLinks.contains(event.target);
-            const clickedToggle = menuToggle.contains(event.target);
-
-            if (!clickedInsideMenu && !clickedToggle) {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-            }
-        });
-
-        // Close menu using Escape key
-        document.addEventListener("keydown", event => {
-            if (event.key === "Escape") {
-                navLinks.classList.remove("active");
-                menuToggle.classList.remove("open");
-                menuToggle.setAttribute("aria-expanded", "false");
-            }
-        });
-    }
-
-
-    // ==========================================
-    // 2. HEADER SCROLL EFFECT
-    // ==========================================
-
-    const header = document.querySelector(".header");
-
-    function updateHeader() {
-        if (header) {
-            header.classList.toggle("scrolled", window.scrollY > 30);
+        if (navbar.classList.contains("open")) {
+            icon.classList.replace("fa-bars", "fa-xmark");
+        } else {
+            icon.classList.replace("fa-xmark", "fa-bars");
         }
-    }
 
-    window.addEventListener("scroll", updateHeader);
-    updateHeader();
+    });
 
+    navLinks.forEach(link => {
 
-    // ==========================================
-    // 3. ROTATING GIS SPECIALISATIONS
-    // ==========================================
+        link.addEventListener("click", () => {
 
-    const changingText = document.getElementById("changing-text");
+            navbar.classList.remove("open");
+            document.body.classList.remove("menu-open");
 
-    const specialisations = [
-        "GIS & Mapping",
-        "Remote Sensing",
-        "Earth Observation",
-        "Spatial Analysis",
-        "Environmental Research"
-    ];
+            const icon = menuToggle.querySelector("i");
 
-    let currentPhrase = 0;
-
-    if (changingText) {
-        setInterval(() => {
-
-            // Fade out current phrase
-            changingText.classList.add("fade-out");
-
-            setTimeout(() => {
-
-                // Move to next phrase
-                currentPhrase = (currentPhrase + 1) % specialisations.length;
-
-                changingText.textContent = specialisations[currentPhrase];
-
-                // Fade in new phrase
-                changingText.classList.remove("fade-out");
-
-            }, 300);
-
-        }, 2500);
-    }
-
-
-    // ==========================================
-    // 4. SCROLL REVEAL ANIMATIONS
-    // ==========================================
-
-    const revealElements = document.querySelectorAll(
-        ".section-heading, " +
-        ".about-main, " +
-        ".highlight-card, " +
-        ".project-card, " +
-        ".skill-group, " +
-        ".experience-item, " +
-        ".contact-info, " +
-        ".contact-form-wrapper, " +
-        ".hero-content, " +
-        ".hero-visual"
-    );
-
-    const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    if (reduceMotion || !("IntersectionObserver" in window)) {
-
-        revealElements.forEach(element => {
-            element.classList.add("revealed");
-        });
-
-    } else {
-
-        revealElements.forEach(element => {
-            element.classList.add("reveal");
-        });
-
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("revealed");
-
-                        observer.unobserve(entry.target);
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
-
-        revealElements.forEach(element => {
-            revealObserver.observe(element);
-        });
-    }
-
-
-    // ==========================================
-    // 5. ACTIVE NAVIGATION LINK
-    // ==========================================
-
-    const sections = document.querySelectorAll("section[id]");
-
-    if ("IntersectionObserver" in window) {
-
-        const sectionObserver = new IntersectionObserver(
-            entries => {
-
-                entries.forEach(entry => {
-
-                    if (entry.isIntersecting) {
-
-                        const sectionId = entry.target.getAttribute("id");
-
-                        navigationItems.forEach(link => {
-
-                            link.classList.remove("active-link");
-
-                            if (link.getAttribute("href") === `#${sectionId}`) {
-                                link.classList.add("active-link");
-                            }
-
-                        });
-                    }
-
-                });
-
-            },
-            {
-                rootMargin: "-35% 0px -55% 0px"
-            }
-        );
-
-        sections.forEach(section => {
-            sectionObserver.observe(section);
-        });
-    }
-
-
-    // ==========================================
-    // 6. AUTOMATIC FOOTER YEAR
-    // ==========================================
-
-    const currentYear = document.getElementById("current-year");
-
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
-    }
-
-
-    // ==========================================
-    // 7. CONTACT FORM - FORMSPREE
-    // ==========================================
-
-    const contactForm = document.querySelector(".contact-form");
-
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", async event => {
-
-            event.preventDefault();
-
-            const submitButton = contactForm.querySelector(
-                'button[type="submit"]'
-            );
-
-            if (!submitButton) {
-                contactForm.submit();
-                return;
-            }
-
-            const originalText = submitButton.textContent;
-
-            submitButton.disabled = true;
-            submitButton.textContent = "Sending...";
-
-            try {
-
-                const response = await fetch(contactForm.action, {
-                    method: "POST",
-                    body: new FormData(contactForm),
-                    headers: {
-                        "Accept": "application/json"
-                    }
-                });
-
-                if (response.ok) {
-
-                    contactForm.reset();
-                    submitButton.textContent = "Message Sent ✓";
-
-                } else {
-
-                    submitButton.textContent = "Could Not Send";
-
-                }
-
-            } catch (error) {
-
-                console.error("Contact form error:", error);
-
-                submitButton.textContent = "Connection Error";
-
-            }
-
-            setTimeout(() => {
-
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-
-            }, 3000);
-
-        });
-    }
-
-
-    // ==========================================
-    // 8. SMOOTH SCROLL FOR NAVIGATION
-    // ==========================================
-
-    document.querySelectorAll('a[href^="#"]').forEach(link => {
-
-        link.addEventListener("click", event => {
-
-            const targetId = link.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                return;
-            }
-
-            const targetElement = document.querySelector(targetId);
-
-            if (targetElement) {
-
-                event.preventDefault();
-
-                targetElement.scrollIntoView({
-                    behavior: reduceMotion ? "auto" : "smooth",
-                    block: "start"
-                });
-
+            if (icon) {
+                icon.classList.replace("fa-xmark", "fa-bars");
             }
 
         });
 
     });
 
+}
 
-    console.log("Portfolio JavaScript loaded successfully.");
+
+/* =========================================
+   HEADER SCROLL EFFECT
+========================================= */
+
+const header = document.getElementById("header");
+
+function updateHeader() {
+
+    if (!header) return;
+
+    if (window.scrollY > 50) {
+        header.classList.add("scrolled");
+    } else {
+        header.classList.remove("scrolled");
+    }
+
+}
+
+window.addEventListener("scroll", updateHeader);
+
+updateHeader();
+
+
+/* =========================================
+   ROTATING GIS SPECIALISATIONS
+========================================= */
+
+const changingText = document.getElementById("changing-text");
+
+const specialisations = [
+    "GIS & Mapping",
+    "Remote Sensing",
+    "Earth Observation",
+    "Spatial Analysis",
+    "Environmental Research",
+    "Geospatial Technology"
+];
+
+let specialisationIndex = 0;
+
+if (changingText) {
+
+    setInterval(() => {
+
+        changingText.style.opacity = "0";
+
+        setTimeout(() => {
+
+            specialisationIndex++;
+
+            if (specialisationIndex >= specialisations.length) {
+                specialisationIndex = 0;
+            }
+
+            changingText.textContent =
+                specialisations[specialisationIndex];
+
+            changingText.style.opacity = "1";
+
+        }, 400);
+
+    }, 3000);
+
+}
+
+
+/* =========================================
+   SCROLL REVEAL
+========================================= */
+
+const revealElements = document.querySelectorAll(".reveal");
+
+const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+
+                entry.target.classList.add("revealed");
+
+                observer.unobserve(entry.target);
+
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.12
+    }
+);
+
+revealElements.forEach(element => {
+
+    revealObserver.observe(element);
+
+});
+
+
+/* =========================================
+   ACTIVE NAVIGATION
+========================================= */
+
+const sections = document.querySelectorAll("section[id]");
+
+function updateActiveNavigation() {
+
+    let currentSection = "";
+
+    sections.forEach(section => {
+
+        const sectionTop = section.offsetTop - 150;
+
+        if (window.scrollY >= sectionTop) {
+            currentSection = section.getAttribute("id");
+        }
+
+    });
+
+    navLinks.forEach(link => {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + currentSection) {
+            link.classList.add("active");
+        }
+
+    });
+
+}
+
+window.addEventListener("scroll", updateActiveNavigation);
+
+
+/* =========================================
+   PROJECT CAROUSEL
+========================================= */
+
+const projectsGrid = document.getElementById("projects-grid");
+
+const projectNext = document.getElementById("project-next");
+const projectPrev = document.getElementById("project-prev");
+
+function getProjectScrollAmount() {
+
+    if (!projectsGrid) return 0;
+
+    const card = projectsGrid.querySelector(".project-card");
+
+    if (!card) return 0;
+
+    const gap = parseFloat(
+        getComputedStyle(projectsGrid).gap
+    ) || 0;
+
+    return card.offsetWidth + gap;
+
+}
+
+
+if (projectNext && projectsGrid) {
+
+    projectNext.addEventListener("click", () => {
+
+        projectsGrid.scrollBy({
+            left: getProjectScrollAmount(),
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+if (projectPrev && projectsGrid) {
+
+    projectPrev.addEventListener("click", () => {
+
+        projectsGrid.scrollBy({
+            left: -getProjectScrollAmount(),
+            behavior: "smooth"
+        });
+
+    });
+
+}
+
+
+/* =========================================
+   PROJECT DRAG SCROLL
+========================================= */
+
+if (projectsGrid) {
+
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    projectsGrid.addEventListener("mousedown", event => {
+
+        if (event.target.closest("a")) return;
+
+        isDragging = true;
+
+        startX = event.pageX;
+        scrollStart = projectsGrid.scrollLeft;
+
+        projectsGrid.style.cursor = "grabbing";
+
+    });
+
+    projectsGrid.addEventListener("mouseleave", () => {
+
+        isDragging = false;
+        projectsGrid.style.cursor = "grab";
+
+    });
+
+    projectsGrid.addEventListener("mouseup", () => {
+
+        isDragging = false;
+        projectsGrid.style.cursor = "grab";
+
+    });
+
+    projectsGrid.addEventListener("mousemove", event => {
+
+        if (!isDragging) return;
+
+        event.preventDefault();
+
+        const distance = event.pageX - startX;
+
+        projectsGrid.scrollLeft = scrollStart - distance;
+
+    });
+
+}
+
+
+/* =========================================
+   CURRENT YEAR
+========================================= */
+
+const currentYear = document.getElementById("current-year");
+
+if (currentYear) {
+
+    currentYear.textContent = new Date().getFullYear();
+
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+const contactForm = document.getElementById("contact-form");
+const formMessage = document.getElementById("form-message");
+
+if (contactForm) {
+
+    contactForm.addEventListener("submit", async event => {
+
+        event.preventDefault();
+
+        const submitButton = contactForm.querySelector(
+            'button[type="submit"]'
+        );
+
+        const originalButtonText = submitButton.innerHTML;
+
+        submitButton.disabled = true;
+
+        submitButton.innerHTML =
+            'Sending... <i class="fas fa-spinner fa-spin"></i>';
+
+        if (formMessage) {
+            formMessage.textContent = "";
+        }
+
+        const formData = new FormData(contactForm);
+
+        try {
+
+            const response = await fetch(contactForm.action, {
+
+                method: "POST",
+
+                body: formData,
+
+                headers: {
+                    "Accept": "application/json"
+                }
+
+            });
+
+            if (response.ok) {
+
+                if (formMessage) {
+                    formMessage.textContent =
+                        "Message sent successfully! Thank you for reaching out.";
+                }
+
+                contactForm.reset();
+
+            } else {
+
+                if (formMessage) {
+                    formMessage.textContent =
+                        "Something went wrong. Please try again.";
+                }
+
+            }
+
+        } catch (error) {
+
+            if (formMessage) {
+                formMessage.textContent =
+                    "Unable to send your message. Please try again.";
+            }
+
+        } finally {
+
+            submitButton.disabled = false;
+            submitButton.innerHTML = originalButtonText;
+
+        }
+
+    });
+
+}
+
+
+/* =========================================
+   BACK TO TOP BUTTON
+========================================= */
+
+const backToTop = document.getElementById("back-to-top");
+
+function updateBackToTop() {
+
+    if (!backToTop) return;
+
+    if (window.scrollY > 500) {
+        backToTop.classList.add("show");
+    } else {
+        backToTop.classList.remove("show");
+    }
+
+}
+
+window.addEventListener("scroll", updateBackToTop);
+
+updateBackToTop();
+
+
+/* =========================================
+   SMOOTH SCROLL
+========================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", event => {
+
+        const targetId = link.getAttribute("href");
+
+        if (targetId === "#") return;
+
+        const target = document.querySelector(targetId);
+
+        if (!target) return;
+
+        event.preventDefault();
+
+        target.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    });
 
 });
