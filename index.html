@@ -1,18 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Alex Kimani's portfolio showcasing Geography, GIS, remote sensing, environmental research and geospatial technology projects.">
+    <title>Alex Kang Ethe | GIS & Geography</title>
 
-    <meta name="theme-color" content="#080E1B">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/fv.png" type="image/x-icon">
 
-    <title>Alex Kimani | GIS & Geospatial Portfolio</title>
-
-    <!-- STYLESHEET -->
+    <!-- CSS -->
     <link rel="stylesheet" href="portfolio.css">
 
     <!-- GOOGLE FONTS -->
@@ -21,1256 +18,1124 @@
 
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- LEAFLET CSS FOR FUTURE MAP PROJECTS -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="shortcut icon" href="img/fv.png" type="image/x-icon">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- BACKGROUND DECORATION -->
-    <div class="background-glow glow-one"></div>
-    <div class="background-glow glow-two"></div>
+<!-- ================= HEADER ================= -->
 
+<header class="header" id="header">
 
-    <!-- =========================
-         NAVIGATION
-    ========================== -->
+    <div class="container nav-container">
 
-    <header class="header">
+        <a href="#home" class="logo">
+            <span class="logo-symbol">A</span>
+            <span>Alex<span class="accent">.</span></span>
+        </a>
 
-        <nav class="navbar container">
-
-            <a href="#home" class="logo">
-                ALEX<span>.</span>
-            </a>
+        <nav class="navbar" id="navbar">
 
             <ul class="nav-links">
 
-                <li><a href="#home" class="active-link">Home</a></li>
+                <li><a href="#home" class="nav-link active">Home</a></li>
 
-                <li><a href="#about">About</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
 
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
 
-                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
 
-                <li><a href="#experience">Experience</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
 
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
 
             </ul>
 
-            <a href="documents/Alex_Kimani_CV.pdf"
-               class="nav-cv"
-               download>
-                Download CV <span>↗</span>
-            </a>
-
-            <button class="menu-toggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
         </nav>
 
-    </header>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+    </div>
+
+</header>
 
 
-    <main>
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container hero-container">
+
+        <div class="hero-content reveal">
+
+            <span class="hero-tag">
+                <span class="status-dot"></span>
+                GEOGRAPHY • GIS • REMOTE SENSING
+            </span>
+
+            <h1>
+                Hi, I'm <span class="accent">Alex Kang'ethe.</span>
+            </h1>
+
+            <h2 class="hero-subtitle">
+                Geospatial & Environmental Research
+            </h2>
+
+            <p class="hero-description">
+
+                Geography graduate passionate about GIS, remote sensing,
+                environmental research, spatial analysis, and using
+                geospatial technology to understand real-world challenges.
+
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    Explore My Work
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+
+                <a href="documents/Alex-Kang-Ethe-CV.pdf"
+                   class="btn btn-outline"
+                   download>
+
+                    Download CV
+                    <i class="fas fa-download"></i>
+
+                </a>
+
+            </div>
+
+            <div class="hero-socials">
+
+                <a href="https://www.linkedin.com/in/alex-kang-ethe-3621a2320/"
+                   target="_blank"
+                   aria-label="LinkedIn">
+
+                    <i class="fab fa-linkedin-in"></i>
+
+                </a>
+
+                <a href="https://github.com/al3x-kimani"
+                   target="_blank"
+                   aria-label="GitHub">
+
+                    <i class="fab fa-github"></i>
+
+                </a>
+
+                <a href="mailto:YOUR_EMAIL_HERE"
+                   aria-label="Email">
+
+                    <i class="fas fa-envelope"></i>
+
+                </a>
+
+            </div>
+
+        </div>
 
 
-        <!-- =========================
-             HERO SECTION
-        ========================== -->
+        <!-- RIGHT SIDE: YOUR PHOTO + SMALL ANIMATION -->
 
-        <section class="hero container" id="home">
+        <div class="hero-profile reveal">
 
-            <div class="hero-content">
+            <div class="profile-image-wrapper">
 
-                <div class="hero-status">
+                <div class="profile-ring"></div>
 
-                    <span class="status-dot"></span>
+                <div class="profile-image">
 
-                    <span>
-                        GEOGRAPHY GRADUATE
+                    <img src="img/profile.jpg"
+                         alt="Alex Kang Ethe"
+                         class="profile-photo">
+
+                </div>
+
+                <span class="profile-badge">
+                    <i class="fas fa-globe"></i>
+                    GIS & Geography
+                </span>
+
+            </div>
+
+
+            <!-- SMALL ANIMATION BELOW PHOTO -->
+
+            <div class="geo-animation">
+
+                <div class="geo-animation-top">
+
+                    <span class="geo-label">
+                        CURRENT FOCUS
+                    </span>
+
+                    <span class="geo-live">
+                        <span class="status-dot"></span>
+                        ACTIVE
                     </span>
 
                 </div>
 
+                <div class="geo-animation-content">
 
-                <p class="hero-intro">
-                    Hello, I'm
-                </p>
+                    <div class="geo-icon">
 
+                        <i class="fas fa-satellite"></i>
 
-                <h1>
-                    Alex<br>
-                    <span>Kimani.</span>
-                </h1>
+                    </div>
 
+                    <div class="geo-text">
 
-                <div class="hero-specialty">
-
-                    <span class="specialty-label">
-                        INTERESTED IN
-                    </span>
-
-                    <div class="rotating-text">
-                        <span id="changing-text">
+                        <span class="geo-title" id="changing-text">
                             GIS & Mapping
                         </span>
 
-                        <span class="typing-cursor"></span>
+                        <span class="geo-subtitle">
+                            Exploring the world through spatial data
+                        </span>
+
                     </div>
 
                 </div>
 
+                <div class="geo-progress">
 
-                <p class="hero-description">
-
-                    I explore the relationship between geography,
-                    spatial data and technology.
-
-                    My interests include GIS, remote sensing,
-                    environmental research and building digital
-                    tools that make geographical information
-                    more useful.
-
-                </p>
-
-
-                <div class="hero-buttons">
-
-                    <a href="#projects" class="primary-button">
-                        Explore My Work <span>↗</span>
-                    </a>
-
-                    <a href="#contact" class="secondary-button">
-                        Get In Touch
-                    </a>
-
-                </div>
-
-
-                <div class="hero-location">
-
-                    <span class="location-icon">⌖</span>
-
-                    <span>
-                        Kenya · Open to opportunities
-                    </span>
+                    <span></span>
 
                 </div>
 
             </div>
 
-
-
-            <!-- HERO GEOSPATIAL VISUAL -->
-
-            <div class="hero-visual">
-
-                <div class="visual-top">
-
-                    <span>GEOSPATIAL INTELLIGENCE</span>
-
-                    <span class="live-indicator">
-                        <i></i> EXPLORING
-                    </span>
-
-                </div>
-
-
-                <div class="earth-visual">
-
-                    <div class="earth-grid"></div>
-
-                    <div class="earth-circle">
-
-                        <div class="earth-inner"></div>
-
-                        <div class="earth-land land-one"></div>
-
-                        <div class="earth-land land-two"></div>
-
-                        <div class="earth-land land-three"></div>
-
-                    </div>
-
-
-                    <!-- ORBIT ANIMATION -->
-
-                    <div class="orbit orbit-one"></div>
-
-                    <div class="orbit orbit-two"></div>
-
-                    <div class="orbit orbit-three"></div>
-
-
-                    <!-- SATELLITE POINT -->
-
-                    <div class="satellite-point">
-                        <span></span>
-                    </div>
-
-
-                    <!-- LOCATION MARKERS -->
-
-                    <div class="geo-marker marker-one"></div>
-
-                    <div class="geo-marker marker-two"></div>
-
-                    <div class="geo-marker marker-three"></div>
-
-
-                    <div class="visual-coordinates">
-
-                        <span>01° 17' S</span>
-
-                        <span>36° 49' E</span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="visual-bottom">
-
-                    <div>
-                        <span class="visual-label">FIELD</span>
-                        <strong>Geospatial Analysis</strong>
-                    </div>
-
-                    <div>
-                        <span class="visual-label">FOCUS</span>
-                        <strong>Earth Observation</strong>
-                    </div>
-
-                </div>
-
-
-                <!-- FLOATING INFORMATION CARD -->
-
-                <div class="floating-info">
-
-                    <span class="floating-icon">⌖</span>
-
-                    <div>
-                        <strong>Spatial Thinking</strong>
-                        <small>Understanding our world</small>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             ABOUT SECTION
-        ========================== -->
-
-        <section class="section container" id="about">
-
-            <div class="section-heading">
-
-                <span class="section-number">01 / ABOUT ME</span>
-
-                <h2>
-                    Geography meets
-                    <span>technology.</span>
-                </h2>
-
-                <p class="section-intro">
-                    A little about my background, interests
-                    and what I am exploring.
-                </p>
-
-            </div>
-
-
-            <div class="about-content">
-
-
-                <div class="about-main">
-
-                    <p class="about-lead">
-
-                        I am a Geography graduate from
-                        Karatina University with an interest
-                        in understanding the world through
-                        geographical data and technology.
-
-                    </p>
-
-
-                    <p>
-
-                        My experience includes supporting
-                        water and sanitation projects,
-                        GIS activities, land reclamation
-                        research and environmental documentation.
-
-                    </p>
-
-
-                    <p>
-
-                        I am particularly interested in
-                        remote sensing, spatial analysis,
-                        environmental monitoring and
-                        interactive web mapping.
-
-                    </p>
-
-
-                    <p>
-
-                        Beyond geographical analysis, I enjoy
-                        exploring programming and digital
-                        technologies that can make spatial
-                        information accessible and practical.
-
-                    </p>
-
-
-                    <a href="#contact" class="text-link">
-                        Let's connect <span>↗</span>
-                    </a>
-
-                </div>
-
-
-
-                <!-- ABOUT HIGHLIGHTS -->
-
-                <div class="about-highlights">
-
-                    <div class="highlight-card">
-
-                        <span class="highlight-number">01</span>
-
-                        <h3>Geography</h3>
-
-                        <p>
-                            Spatial thinking and geographical research.
-                        </p>
-
-                    </div>
-
-
-                    <div class="highlight-card">
-
-                        <span class="highlight-number">02</span>
-
-                        <h3>GIS</h3>
-
-                        <p>
-                            Mapping, spatial analysis and visualization.
-                        </p>
-
-                    </div>
-
-
-                    <div class="highlight-card">
-
-                        <span class="highlight-number">03</span>
-
-                        <h3>Environment</h3>
-
-                        <p>
-                            Water, land and climate-related research.
-                        </p>
-
-                    </div>
-
-
-                    <div class="highlight-card">
-
-                        <span class="highlight-number">04</span>
-
-                        <h3>Technology</h3>
-
-                        <p>
-                            Programming and interactive mapping.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             PROJECTS SECTION
-        ========================== -->
-
-        <section class="section projects-section" id="projects">
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-                    <span class="section-number">02 / SELECTED WORK</span>
-
-                    <h2>
-                        Projects &
-                        <span>explorations.</span>
-                    </h2>
-
-                    <p class="section-intro">
-                        Practical work and experiments involving
-                        GIS, environmental research and digital mapping.
-                    </p>
-
-                </div>
-
-
-
-                <div class="projects-grid">
-
-
-                    <!-- PROJECT ONE -->
-
-                    <article class="project-card">
-
-                        <div class="project-image flood-image">
-
-                            <span class="project-index">01</span>
-
-                            <span class="project-type">
-                                GIS ANALYSIS
-                            </span>
-
-                            <div class="project-image-overlay">
-                                FLOOD RISK MAPPING
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                DISASTER RISK · ENVIRONMENT
-                            </span>
-
-                            <h3>
-                                Rising Flood Risk in Kitengela
-                            </h3>
-
-                            <p>
-
-                                Exploring urban expansion,
-                                rainfall, terrain and flood
-                                vulnerability to support
-                                disaster preparedness.
-
-                            </p>
-
-
-                            <div class="project-tools">
-
-                                <span>QGIS</span>
-                                <span>GEE</span>
-                                <span>GIS</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-                                View Project <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT TWO -->
-
-                    <article class="project-card">
-
-                        <div class="project-image reclamation-image">
-
-                            <span class="project-index">02</span>
-
-                            <span class="project-type">
-                                ENVIRONMENT
-                            </span>
-
-                            <div class="project-image-overlay">
-                                LAND & CLIMATE
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                LAND RECLAMATION · CLIMATE
-                            </span>
-
-                            <h3>
-                                Land Reclamation & Climate Resilience
-                            </h3>
-
-                            <p>
-
-                                GIS-related work supporting
-                                irrigation, water security,
-                                land reclamation and
-                                environmental resilience.
-
-                            </p>
-
-
-                            <div class="project-tools">
-
-                                <span>QGIS</span>
-                                <span>Remote Sensing</span>
-                                <span>GIS</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-                                View Project <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT THREE -->
-
-                    <article class="project-card">
-
-                        <div class="project-image mapping-image">
-
-                            <span class="project-index">03</span>
-
-                            <span class="project-type">
-                                WEB MAPPING
-                            </span>
-
-                            <div class="project-image-overlay">
-                                INTERACTIVE MAPS
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                WEB GIS · OPENSTREETMAP
-                            </span>
-
-                            <h3>
-                                Interactive Mapping Experiments
-                            </h3>
-
-                            <p>
-
-                                Exploring browser-based maps,
-                                geographical APIs and
-                                interactive spatial data
-                                visualization.
-
-                            </p>
-
-
-                            <div class="project-tools">
-
-                                <span>Leaflet</span>
-                                <span>JavaScript</span>
-                                <span>OSM</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-                                View Project <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PROJECT FOUR -->
-
-                    <article class="project-card">
-
-                        <div class="project-image tileup-image">
-
-                            <span class="project-index">04</span>
-
-                            <span class="project-type">
-                                WEB DEVELOPMENT
-                            </span>
-
-                            <div class="project-image-overlay">
-                                TILEUP PROJECT
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-info">
-
-                            <span class="project-category">
-                                WEB DEVELOPMENT · DATABASES
-                            </span>
-
-                            <h3>
-                                TileUp – Scrabble Club
-                            </h3>
-
-                            <p>
-
-                                Developing a digital platform
-                                for player registration,
-                                score management and
-                                leaderboard tracking.
-
-                            </p>
-
-
-                            <div class="project-tools">
-
-                                <span>HTML</span>
-                                <span>JavaScript</span>
-                                <span>Flask</span>
-                                <span>SQLite</span>
-
-                            </div>
-
-
-                            <a href="#" class="project-link">
-                                View Project <span>↗</span>
-                            </a>
-
-                        </div>
-
-                    </article>
-<!-- PROJECT FIVE -->
-
-<article class="project-card">
-
-    <div class="project-image geology-image">
-
-        <span class="project-index">05</span>
-
-        <span class="project-type">
-            GIS & GEOSPATIAL MAPPING
-        </span>
-
-        <div class="project-image-overlay">
-            GEOLOGICAL MAP OF KENYA
         </div>
 
     </div>
 
-
-    <div class="project-info">
-
-        <span class="project-category">
-            GIS · GEOLOGY · CARTOGRAPHY
-        </span>
-
-        <h3>
-            Geological Map of Kenya
-        </h3>
-
-        <p>
-
-            A geological mapping project illustrating
-            the spatial distribution of geological
-            formations, rock types and geological
-            characteristics across Kenya.
-
-        </p>
+</section>
 
 
-        <div class="project-tools">
+<!-- ================= ABOUT ================= -->
 
-            <span>QGIS</span>
-            <span>GIS</span>
-            <span>Cartography</span>
-            <span>Geospatial Data</span>
+<section class="section about-section" id="about">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">01 / ABOUT ME</span>
+
+            <h2>Turning geographical data into <span class="accent">meaningful insights.</span></h2>
 
         </div>
 
 
-        <a href="#" class="project-link">
-            View Project <span>↗</span>
-        </a>
+        <div class="about-grid">
 
-    </div>
+            <div class="about-text reveal">
 
-</article>
+                <p>
 
-                </div>
+                    I am a Geography graduate from Karatina University
+                    with a growing interest in geospatial technology,
+                    environmental management, and spatial research.
 
-            </div>
+                </p>
 
-        </section>
+                <p>
 
+                    My academic and practical experience has exposed
+                    me to GIS mapping, remote sensing, environmental
+                    analysis, water and sanitation projects, data
+                    collection, and research.
 
+                </p>
 
-        <!-- =========================
-             SKILLS SECTION
-        ========================== -->
+                <p>
 
-        <section class="section container" id="skills">
+                    I enjoy exploring how maps, satellite imagery,
+                    spatial data, and technology can support decision-making
+                    in environmental conservation, climate resilience,
+                    urban development, and natural resource management.
 
-
-            <div class="section-heading">
-
-                <span class="section-number">03 / CAPABILITIES</span>
-
-                <h2>
-                    Tools and
-                    <span>technologies.</span>
-                </h2>
-
-                <p class="section-intro">
-                    Technologies and skills I use in my
-                    geographical and digital projects.
                 </p>
 
             </div>
 
 
+            <div class="about-details reveal">
 
-            <div class="skills-grid">
+                <div class="detail-card">
+
+                    <span class="detail-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </span>
+
+                    <div>
+
+                        <h3>Education</h3>
+
+                        <p>Bachelor of Arts in Geography</p>
+
+                        <span>Karatina University</span>
+
+                    </div>
+
+                </div>
 
 
-                <div class="skill-group">
+                <div class="detail-card">
 
-                    <div class="skill-icon">⌖</div>
+                    <span class="detail-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </span>
 
-                    <h3>GIS & Remote Sensing</h3>
+                    <div>
+
+                        <h3>Specialisation</h3>
+
+                        <p>GIS & Remote Sensing</p>
+
+                        <span>Spatial Analysis & Mapping</span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-card">
+
+                    <span class="detail-icon">
+                        <i class="fas fa-leaf"></i>
+                    </span>
+
+                    <div>
+
+                        <h3>Research Interests</h3>
+
+                        <p>Environment & Climate</p>
+
+                        <span>Water, Land & Natural Resources</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="section projects-section" id="projects">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">02 / SELECTED WORK</span>
+
+            <h2>Projects & <span class="accent">Explorations</span></h2>
+
+            <p>
+                Practical projects involving GIS, mapping,
+                environmental analysis, and technology.
+            </p>
+
+        </div>
+
+
+        <div class="projects-toolbar">
+
+            <div class="project-counter">
+                <span>05</span> PROJECTS
+            </div>
+
+            <div class="project-controls">
+
+                <button id="project-prev" aria-label="Previous projects">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <button id="project-next" aria-label="Next projects">
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="projects-grid" id="projects-grid">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image flood-image">
+
+                    <span class="project-index">01</span>
+
+                    <span class="project-type">
+                        GIS ANALYSIS
+                    </span>
+
+                    <div class="project-image-overlay">
+                        FLOOD RISK MAPPING
+                    </div>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <span class="project-category">
+                        ENVIRONMENT • DISASTER RISK
+                    </span>
+
+                    <h3>Rising Flood Risk in Kitengela</h3>
 
                     <p>
-                        Geospatial tools and earth observation.
+
+                        Spatial assessment of flood susceptibility
+                        and urban growth to support early warning
+                        and disaster preparedness.
+
                     </p>
 
-                    <div class="skill-tags">
+                    <div class="project-tags">
 
                         <span>QGIS</span>
-                        <span>ArcGIS</span>
                         <span>Google Earth Engine</span>
-                        <span>Google Earth</span>
-                        <span>Spatial Analysis</span>
-                        <span>Remote Sensing</span>
+                        <span>MCDA</span>
 
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image reclamation-image">
+
+                    <span class="project-index">02</span>
+
+                    <span class="project-type">
+                        ENVIRONMENTAL GIS
+                    </span>
+
+                    <div class="project-image-overlay">
+                        LAND RECLAMATION
                     </div>
 
                 </div>
 
 
+                <div class="project-info">
 
-                <div class="skill-group">
+                    <span class="project-category">
+                        WATER • CLIMATE RESILIENCE
+                    </span>
 
-                    <div class="skill-icon">&lt;/&gt;</div>
-
-                    <h3>Programming & Web</h3>
+                    <h3>Land Reclamation & Climate Resilience</h3>
 
                     <p>
-                        Web development and programming.
+
+                        GIS-related work supporting irrigation,
+                        land reclamation, water management,
+                        and climate resilience initiatives.
+
                     </p>
 
-                    <div class="skill-tags">
+                    <div class="project-tags">
+
+                        <span>GIS</span>
+                        <span>Water</span>
+                        <span>Research</span>
+
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image mapping-image">
+
+                    <span class="project-index">03</span>
+
+                    <span class="project-type">
+                        GEOSPATIAL MAPPING
+                    </span>
+
+                    <div class="project-image-overlay">
+                        SPATIAL DATA
+                    </div>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <span class="project-category">
+                        CARTOGRAPHY • GIS
+                    </span>
+
+                    <h3>Geospatial Mapping & Analysis</h3>
+
+                    <p>
+
+                        Spatial data processing, mapping,
+                        geographic visualisation, and GIS
+                        workflows using geospatial tools.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>ArcGIS</span>
+                        <span>QGIS</span>
+                        <span>Mapping</span>
+
+                    </div>
+
+                    <a href="#" class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image tileup-image">
+
+                    <span class="project-index">04</span>
+
+                    <span class="project-type">
+                        WEB DEVELOPMENT
+                    </span>
+
+                    <div class="project-image-overlay">
+                        TILEUP PROJECT
+                    </div>
+
+                </div>
+
+
+                <div class="project-info">
+
+                    <span class="project-category">
+                        WEB • DATABASE
+                    </span>
+
+                    <h3>TileUp – Scrabble Club</h3>
+
+                    <p>
+
+                        A digital platform for managing
+                        Scrabble players, registrations,
+                        scores, rankings, and club records.
+
+                    </p>
+
+                    <div class="project-tags">
 
                         <span>HTML</span>
                         <span>CSS</span>
-                        <span>JavaScript</span>
                         <span>Python</span>
-                        <span>Leaflet</span>
                         <span>Flask</span>
 
                     </div>
 
+                    <a href="#" class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- PROJECT 05 -->
+
+            <article class="project-card reveal">
+
+                <div class="project-image geology-image">
+
+                    <span class="project-index">05</span>
+
+                    <span class="project-type">
+                        GEOLOGY & CARTOGRAPHY
+                    </span>
+
+                    <div class="project-image-overlay">
+                        GEOLOGICAL MAP OF KENYA
+                    </div>
+
                 </div>
 
 
+                <div class="project-info">
 
-                <div class="skill-group">
+                    <span class="project-category">
+                        GEOLOGY • MAP DESIGN
+                    </span>
 
-                    <div class="skill-icon">▦</div>
-
-                    <h3>Data & Research</h3>
+                    <h3>Geological Map of Kenya</h3>
 
                     <p>
-                        Data collection, analysis and research.
-                    </p>
 
-                    <div class="skill-tags">
-
-                        <span>Excel</span>
-                        <span>Google Sheets</span>
-                        <span>Data Collection</span>
-                        <span>Research</span>
-                        <span>Data Visualization</span>
-
-                    </div>
-
-                </div>
-
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             EXPERIENCE SECTION
-        ========================== -->
-
-        <section class="section experience-section" id="experience">
-
-            <div class="container">
-
-                <div class="section-heading">
-
-                    <span class="section-number">04 / EXPERIENCE</span>
-
-                    <h2>
-                        My professional
-                        <span>journey.</span>
-                    </h2>
-
-                </div>
-
-
-
-                <div class="experience-list">
-
-
-                    <article class="experience-item">
-
-                        <div class="experience-date">
-                            2025
-                        </div>
-
-
-                        <div class="experience-details">
-
-                            <span class="experience-label">
-                                ATTACHMENT
-                            </span>
-
-                            <h3>
-                                Maji House
-                            </h3>
-
-                            <p class="experience-role">
-                                Water & Sanitation Projects /
-                                Land Reclamation GIS Department
-                            </p>
-
-                            <p>
-
-                                Supported water and sanitation
-                                project documentation, GIS
-                                activities, irrigation scheme
-                                mapping, monitoring and
-                                environmental research.
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-
-                    <article class="experience-item">
-
-                        <div class="experience-date">
-                            2025
-                        </div>
-
-                        <div class="experience-details">
-
-                            <span class="experience-label">
-                                RESEARCH
-                            </span>
-<br>
-
-
-
-                            <h3>
-                                Youth Café
-                            </h3>
-                            <p class="experience-role">
-                                Research Fellow
-                            </p>
-                            <p>
-
-                                Participated in youth-focused
-                                research, facilitated wellbeing
-                                sessions and supported
-                                outcome data collection.
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="experience-item">
-
-                        <div class="experience-date">
-                            2025
-                        </div>
-<br>
-
-                        <div class="experience-details">
-
-                            <span class="experience-label">
-                                EXTERNSHIP
-                            </span>
-
-                            <h3>
-                                Expedia
-                            </h3>
-
-                            <p class="experience-role">
-                                Competitive Intelligence Extern
-                            </p>
-
-                            <p>
-
-                                Gained exposure to research,
-                                data analysis, project work
-                                and strategic insights.
-
-                            </p>
-
-                        </div>
-
-                    </article>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             CONTACT SECTION
-        ========================== -->
-
-        <section class="section contact-section" id="contact">
-
-            <div class="container">
-
-
-                <div class="section-heading">
-
-                    <span class="section-number">05 / CONTACT</span>
-
-                    <h2>
-                        Let's create
-                        <span>something meaningful.</span>
-                    </h2>
-
-                    <p class="section-intro">
-
-                        Have a project, opportunity or
-                        collaboration in mind? Let's connect.
+                        A geographic visualisation of Kenya's
+                        geological formations, spatial distribution,
+                        and geological characteristics.
 
                     </p>
 
-                </div>
+                    <div class="project-tags">
 
-
-
-                <div class="contact-container">
-
-
-                    <!-- CONTACT INFORMATION -->
-
-                    <div class="contact-info">
-
-                        <h3>
-                            Let's start a conversation.
-                        </h3>
-
-
-                        <p>
-
-                            I am open to internships,
-                            entry-level opportunities,
-                            GIS projects, research and
-                            professional collaborations.
-
-                        </p>
-
-
-
-                        <div class="contact-detail">
-
-                            <span>EMAIL</span>
-
-                            <a href="mailto:YOUR_EMAIL@example.com">
-                                YOUR_EMAIL@example.com
-                            </a>
-
-                        </div>
-
-
-
-                        <div class="contact-detail">
-
-                            <span>LOCATION</span>
-
-                            <p>
-                                Kenya · Open to Remote
-                            </p>
-
-                        </div>
-
-
-
-                        <div class="contact-detail">
-
-                            <span>AREAS OF INTEREST</span>
-
-                            <p>
-                                GIS · Remote Sensing · Research · Environment
-                            </p>
-
-                        </div>
-
-
-
-                        <div class="social-links">
-
-                            <a href="https://www.linkedin.com/in/alex-kang-ethe-3621a2320/"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                LinkedIn ↗
-                            </a>
-
-                            <a href="https://github.com/al3x-kimani"
-                               target="_blank"
-                               rel="noopener noreferrer">
-                                GitHub ↗
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- CV DOWNLOAD -->
-
-                        <div class="cv-download">
-
-                            <div class="cv-text">
-
-                                <span>MY RESUME</span>
-
-                                <h3>
-                                    Explore my background.
-                                </h3>
-
-                                <p>
-                                    Download my CV for more
-                                    information about my
-                                    education and experience.
-                                </p>
-
-                            </div>
-
-
-                            <a href="documents/Alex_Kimani_CV.pdf"
-                               class="cv-button"
-                               download>
-
-                                Download CV <span>↓</span>
-
-                            </a>
-
-                        </div>
+                        <span>GIS</span>
+                        <span>Cartography</span>
+                        <span>Geology</span>
 
                     </div>
 
-
-
-                    <!-- CONTACT FORM -->
-
-                    <div class="contact-form-wrapper">
-
-                        <h3>
-                            Send me a message
-                        </h3>
-
-
-                        <form class="contact-form"
-                              action="https://formspree.io/f/mpwprjpo"
-                              method="POST">
-
-
-                            <div class="form-group">
-
-                                <label for="name">
-                                    Your Name
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="name"
-                                    name="name"
-                                    placeholder="Enter your name"
-                                    required>
-
-                            </div>
-
-
-
-                            <div class="form-group">
-
-                                <label for="email">
-                                    Email Address
-                                </label>
-
-                                <input
-                                    type="email"
-                                    id="email"
-                                    name="_replyto"
-                                    placeholder="Enter your email"
-                                    required>
-
-                            </div>
-
-
-
-                            <div class="form-group">
-
-                                <label for="subject">
-                                    Subject
-                                </label>
-
-                                <input
-                                    type="text"
-                                    id="subject"
-                                    name="subject"
-                                    placeholder="What is this about?">
-
-                            </div>
-
-
-
-                            <div class="form-group">
-
-                                <label for="message">
-                                    Message
-                                </label>
-
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="6"
-                                    placeholder="Write your message here..."
-                                    required></textarea>
-
-                            </div>
-
-
-
-                            <button type="submit">
-                                Send Message <span>↗</span>
-                            </button>
-
-
-                        </form>
-
-                    </div>
+                    <a href="#" class="project-link">
+                        View Project
+                        <i class="fas fa-arrow-up-right-from-square"></i>
+                    </a>
 
                 </div>
 
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer class="footer">
-
-        <div class="container footer-content">
-
-
-            <a href="#home" class="logo">
-                ALEX<span>.</span>
-            </a>
-
-
-            <p>
-                Exploring geography through data and technology.
-            </p>
-
-
-            <div class="footer-links">
-
-                <a href="#home">Home</a>
-
-                <a href="#about">About</a>
-
-                <a href="#projects">Projects</a>
-
-                <a href="#contact">Contact</a>
-
-            </div>
-
-
-            <p class="copyright">
-                © <span id="current-year">2026</span>
-                Alex Kimani. All rights reserved.
-            </p>
+            </article>
 
 
         </div>
 
-    </footer>
+    </div>
+
+</section>
 
 
-    <!-- JAVASCRIPT -->
-    <script src="portfolio.js"></script>
+<!-- ================= SKILLS ================= -->
+
+<section class="section skills-section" id="skills">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">03 / TOOLKIT</span>
+
+            <h2>Tools & <span class="accent">Capabilities</span></h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-card-header">
+
+                    <i class="fas fa-earth-africa"></i>
+
+                    <h3>GIS & Geospatial</h3>
+
+                </div>
+
+                <div class="skill-list">
+
+                    <span>QGIS</span>
+                    <span>ArcGIS</span>
+                    <span>Google Earth Engine</span>
+                    <span>Spatial Analysis</span>
+                    <span>Digital Mapping</span>
+                    <span>Remote Sensing</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-card-header">
+
+                    <i class="fas fa-chart-line"></i>
+
+                    <h3>Data & Research</h3>
+
+                </div>
+
+                <div class="skill-list">
+
+                    <span>Excel</span>
+                    <span>Google Sheets</span>
+                    <span>Data Collection</span>
+                    <span>Data Analysis</span>
+                    <span>Research</span>
+                    <span>Reporting</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-card-header">
+
+                    <i class="fas fa-code"></i>
+
+                    <h3>Technology</h3>
+
+                </div>
+
+                <div class="skill-list">
+
+                    <span>Python</span>
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                    <span>Flask</span>
+                    <span>SQLite</span>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-card reveal">
+
+                <div class="skill-card-header">
+
+                    <i class="fas fa-lightbulb"></i>
+
+                    <h3>Other Skills</h3>
+
+                </div>
+
+                <div class="skill-list">
+
+                    <span>Documentation</span>
+                    <span>Communication</span>
+                    <span>Problem Solving</span>
+                    <span>Teamwork</span>
+                    <span>Canva</span>
+                    <span>AI Tools</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="section experience-section" id="experience">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">04 / EXPERIENCE</span>
+
+            <h2>Learning through <span class="accent">experience.</span></h2>
+
+        </div>
+
+
+        <div class="experience-timeline">
+
+
+            <!-- EXPERIENCE 01 -->
+
+            <article class="timeline-item reveal">
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        MAY – JULY 2025
+                    </span>
+
+                    <h3>GIS & Water Projects Attachment</h3>
+
+                    <h4>Ministry of Water / Maji House</h4>
+
+                    <p>
+
+                        Supported water, sanitation, land reclamation,
+                        irrigation, and climate resilience-related
+                        activities through GIS, research, mapping,
+                        monitoring, and documentation.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>GIS</span>
+                        <span>Water</span>
+                        <span>Land Reclamation</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIENCE 02 -->
+
+            <article class="timeline-item reveal">
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        RESEARCH EXPERIENCE
+                    </span>
+
+                    <h3>Research & Youth Engagement</h3>
+
+                    <h4>Youth Café</h4>
+
+                    <p>
+
+                        Participated in youth-focused research
+                        and engagement activities, facilitated
+                        learning sessions, and supported data
+                        collection and wellbeing-related activities.
+
+                    </p>
+
+                    <div class="project-tags">
+
+                        <span>Research</span>
+                        <span>Data Collection</span>
+                        <span>Communication</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+            <!-- EXPERIENCE 03 -->
+
+            <article class="timeline-item reveal">
+
+                <div class="timeline-marker"></div>
+
+                <div class="timeline-content">
+
+                    <span class="timeline-date">
+                        UNIVERSITY
+                    </span>
+
+                    <h3>Scrabble Club Team Captain</h3>
+
+                    <h4>Karatina University</h4>
+
+                    <p>
+
+                        Developed teamwork, strategic thinking,
+                        leadership, communication, and
+                        problem-solving through competitive
+                        Scrabble and team participation.
+
+                    </p>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="section contact-section" id="contact">
+
+    <div class="container">
+
+        <div class="section-heading reveal">
+
+            <span class="section-label">05 / CONTACT</span>
+
+            <h2>Let's connect & <span class="accent">collaborate.</span></h2>
+
+            <p>
+
+                Interested in GIS, environmental projects,
+                research, mapping, or opportunities?
+                Feel free to reach out.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+            <div class="contact-details reveal">
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>Email</h3>
+
+                        <a href="mailto:YOUR_EMAIL_HERE">
+                            YOUR_EMAIL_HERE
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>LinkedIn</h3>
+
+                        <a href="https://www.linkedin.com/in/alex-kang-ethe-3621a2320/"
+                           target="_blank">
+
+                            Connect with me
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+
+                    <div>
+
+                        <h3>GitHub</h3>
+
+                        <a href="https://github.com/YOUR_USERNAME"
+                           target="_blank">
+
+                            Explore my repositories
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form class="contact-form reveal"
+                  action="https://formspree.io/f/mpwprjpo"
+                  method="POST"
+                  id="contact-form">
+
+                <div class="form-group">
+
+                    <label for="name">Your Name</label>
+
+                    <input type="text"
+                           id="name"
+                           name="name"
+                           placeholder="Enter your name"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="email">Your Email</label>
+
+                    <input type="email"
+                           id="email"
+                           name="email"
+                           placeholder="Enter your email"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="subject">Subject</label>
+
+                    <input type="text"
+                           id="subject"
+                           name="subject"
+                           placeholder="What is this about?"
+                           required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">Message</label>
+
+                    <textarea id="message"
+                              name="message"
+                              rows="5"
+                              placeholder="Write your message..."
+                              required></textarea>
+
+                </div>
+
+
+                <button type="submit" class="btn btn-primary form-submit">
+
+                    Send Message
+                    <i class="fas fa-paper-plane"></i>
+
+                </button>
+
+
+                <p id="form-message" class="form-message"></p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="container footer-container">
+
+        <a href="#home" class="logo">
+
+            <span class="logo-symbol">A</span>
+
+            <span>Alex<span class="accent">.</span></span>
+
+        </a>
+
+
+        <p>
+            Geography • GIS • Remote Sensing
+        </p>
+
+
+        <div class="footer-socials">
+
+            <a href="https://www.linkedin.com/in/alex-kang-ethe-3621a2320/"
+               target="_blank">
+
+                <i class="fab fa-linkedin-in"></i>
+
+            </a>
+
+            <a href="https://github.com/al3x-kimani"
+               target="_blank">
+
+                <i class="fab fa-github"></i>
+
+            </a>
+
+        </div>
+
+
+        <p class="copyright">
+
+            © <span id="current-year"></span>
+            Alex Kang'ethe. All rights reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<a href="#home" class="back-to-top" id="back-to-top">
+
+    <i class="fas fa-arrow-up"></i>
+
+</a>
+
+
+<!-- JAVASCRIPT -->
+
+<script src="portfolio.js"></script>
 
 </body>
-
 </html>
