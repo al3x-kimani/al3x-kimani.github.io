@@ -728,7 +728,31 @@ body::after {
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
         url("images/tileup-project.jpg") center/cover;
 }
+/* GEOLOGICAL MAP PROJECT */
 
+.geology-image {
+    background:
+        linear-gradient(
+            rgba(8, 12, 18, 0.2),
+            rgba(8, 12, 18, 0.85)
+        ),
+        url("img//* GEOLOGICAL MAP PROJECT */
+
+.geology-image {
+    background:
+        linear-gradient(
+            rgba(8, 12, 18, 0.2),
+            rgba(8, 12, 18, 0.85)
+        ),
+        url("img/GLG.kenya.png");
+
+    background-size: cover;
+    background-position: center;
+}.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
 .project-info {
     padding: 25px;
 }
