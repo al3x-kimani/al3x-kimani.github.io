@@ -681,7 +681,11 @@ img {
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
         url("img/glg_kenya.png");
 }
-
+.proximity-image {
+    background-image:
+        linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
+        url("img/proximity.jpg");
+}
 .project-info {
     padding: 25px;
 }
