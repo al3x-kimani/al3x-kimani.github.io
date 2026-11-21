@@ -728,7 +728,11 @@ body::after {
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
         url("images/tileup-project.jpg") center/cover;
 }
-
+.geology-image {
+    background:
+        linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
+        url("img/glg_kenya.png") center/cover;
+}
 .project-info {
     padding: 25px;
 }
