@@ -708,7 +708,7 @@ body::after {
 .flood-image {
     background:
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
-        url("img/Flood_Susceptibility_Map.png") center/cover;
+        url("img/Flood_Susceptibility_Map.png"") center/cover;
 }
 
 .reclamation-image {
@@ -728,22 +728,12 @@ body::after {
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
         url("images/tileup-project.jpg") center/cover;
 }
-/* GEOLOGICAL MAP PROJECT */
 .geology-image {
     background:
-        linear-gradient(
-            rgba(8, 12, 18, 0.2),
-            rgba(8, 12, 18, 0.85)
-        ),
-        url("img/glg_kenya.png");
-
-    background-size: cover;
-    background-position: center;
-}.jpg");
-
-    background-size: cover;
-    background-position: center;
+        linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
+        url("img/geological-map-kenya.jpeg") center/cover;
 }
+
 .project-info {
     padding: 25px;
 }
