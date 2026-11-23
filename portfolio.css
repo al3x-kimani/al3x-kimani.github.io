@@ -704,7 +704,7 @@ img {
 .medium-writing-image {
     background-image:
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
-        url("img/medium-writing.png");
+        url("img/medium-writing.jpeg");
 }
 .project-info {
     padding: 25px;
