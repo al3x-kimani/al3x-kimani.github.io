@@ -701,6 +701,11 @@ img {
         linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
         url("img/website-prototype.png");
 }
+.medium-writing-image {
+    background-image:
+        linear-gradient(rgba(9,13,18,.1), rgba(9,13,18,.4)),
+        url("img/medium-writing.png");
+}
 .project-info {
     padding: 25px;
 }
